@@ -1,18 +1,22 @@
 
-
-import VueRouter from 'vue-router';
-
+import VueRouter from 'vue-router'
+import Home from '@/pages/Home.vue'
 
 const routes = [
-    // { path: '/', redirect: '/my/income' },
-   
+  { path: '/', redirect: '/home' },
+
+  {
+    path: '/home',
+    component: Home
+  }
+
 ]
 
 const router = new VueRouter({
-    routes
+  routes
 })
 
-//const isLogin = () =>Boolean(sessionStorage.getItem('user')) 
+// const isLogin = () =>Boolean(sessionStorage.getItem('user'))
 
 // router.beforeEach((to, from, next) => {
 //     //登陆验证

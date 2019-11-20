@@ -1,36 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import axios from '@/axios'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: "app",
+  components: {},
+  data() {
+    return {
+
+    };
   },
 
+  created() {
 
-  created(){
-      axios.post('/api',{a:'1',b:'2'}).then(res=>{
-
-      })
   }
-}
+};
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.scroll {
+  position: fixed;
+  height: 500px !important;
+}
+
+.test {
+  height: 100px;
+  color: #fff;
+  line-height: 100px;
+}
+.test:nth-child(2n) {
+  background-color: red;
+}
+.test:nth-child(2n + 1) {
+  background-color: black;
 }
 </style>
